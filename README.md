@@ -34,3 +34,12 @@ to save compile time, such as `num-traits`.
 [`phf`](https://crates.io/crates/phf), Perficate Hash Function, is a macro to generate a perfect hash function.
 Generate lookup table at compile time. PHF hashtable is a fast and memory efficient alternative to `HashMap`.
 `phf` crate is very popular, a good tool to do tiny optimization.
+
+## String Interning, Tiny/Small String
+
+`string-interner`, `string-cache`, `tinystr`, `smartstr`, `kstring` and many other tiny/small strings.
+
+`string-interner` is specifically designed for interning, it's a bit low level and hard to use. Does not support mutable.
+
+`string-cache` has a confusing name, but it's a general purpose tiny string library, support mutable, static, inline storage (upper to 7 bytes).
+High efficiency. Use a single u64 as underlying storage, smaller than most tiny/small string crates. It should work on wasm, see: [issue](https://github.com/servo/string-cache/pull/254). Best use case: heavily mix use of predefined static str and ascii str, such as computer language parsing and tokenizing. Drawback: heavily unsafe code.
