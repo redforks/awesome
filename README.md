@@ -29,6 +29,14 @@
 `num` crate is a meta crate, if only use a few features, such as `ToPrimitimive`, import the specific crates
 to save compile time, such as `num-traits`.
 
+## cint crate
+
+`cint`` - color interop, defines common color types, and a `Spaces` enum for these color spaces. No color space conversion.
+
+## mint crate
+
+`mint` - Math interoperability standard types. Mainly for computer graphics, such as Matrix, Point, Angle, Vector.
+
 ## phf
 
 [`phf`](https://crates.io/crates/phf), Perficate Hash Function, is a macro to generate a perfect hash function.
@@ -43,3 +51,18 @@ Generate lookup table at compile time. PHF hashtable is a fast and memory effici
 
 `string-cache` has a confusing name, but it's a general purpose tiny string library, support mutable, static, inline storage (upper to 7 bytes).
 High efficiency. Use a single u64 as underlying storage, smaller than most tiny/small string crates. It should work on wasm, see: [issue](https://github.com/servo/string-cache/pull/254). Best use case: heavily mix use of predefined static str and ascii str, such as computer language parsing and tokenizing. Drawback: heavily unsafe code.
+
+## Ant Design
+
+[Ant Design](https://ant.design/) Application UI components, React based. Use its own css classes, not based on tailwind. Very popular.
+
+## Shadcn-UI
+
+[Shadcn-UI](https://shadcn-ui.com/) Application UI components, React based and other official bindings such as steve. Use tailwind css classes, 
+support many themes.
+
+## Nuxt and Next
+
+Next is React based, Nuxt is Vue based. They are similar, support hyper computation, provides server and client side components,
+controller, and BI processing etc. I haven't use it yet, because I don't want js at server side. Static Server side not very useful, because it
+is static.
